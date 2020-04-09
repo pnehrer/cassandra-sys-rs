@@ -18,7 +18,6 @@ travis-ci = { repository = "Metaswitch/cassandra-sys-rs" }
 
 [lib]
 name = "cassandra_cpp_sys"
-crate-type = ["staticlib"]
 
 [dev-dependencies]
 log = "0.3"
