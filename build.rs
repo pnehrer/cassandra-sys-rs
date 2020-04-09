@@ -5,15 +5,15 @@ fn main() {
         }
     }
 
-    #[cfg(all(target_arch = "x86_64", target_os = "linux", target_env = "musl"))]
-    {
-        println!("cargo:rustc-link-lib=static=cassandra_static");
-        println!("cargo:rustc-link-lib=static=crypto");
-        println!("cargo:rustc-link-lib=static=ssl");
-        println!("cargo:rustc-link-lib=static=stdc++");
-        println!("cargo:rustc-link-lib=static=uv");
-        println!("cargo:rustc-link-search={}", "/usr/local/musl/lib");
-    }
+    // #[cfg(all(target_arch = "x86_64", target_os = "linux", target_env = "musl"))]
+    // {
+    println!("cargo:rustc-link-lib=static=cassandra_static");
+    println!("cargo:rustc-link-lib=static=crypto");
+    println!("cargo:rustc-link-lib=static=ssl");
+    println!("cargo:rustc-link-lib=static=stdc++");
+    println!("cargo:rustc-link-lib=static=uv");
+    println!("cargo:rustc-link-search={}", "/usr/local/musl/lib");
+    // }
 
     // println!("cargo:rustc-flags=-l dylib=cassandra");
     // println!("cargo:rustc-flags=-l dylib=crypto");
