@@ -7,7 +7,7 @@ fn main() {
 
     #[cfg(all(target_arch = "x86_64", target_os = "linux", target_env = "musl"))]
     {
-        println!("cargo:rustc-link-lib=static=cassandra");
+        println!("cargo:rustc-link-lib=static=cassandra_static");
         println!("cargo:rustc-link-lib=static=crypto");
         println!("cargo:rustc-link-lib=static=ssl");
         println!("cargo:rustc-link-lib=static=stdc++");
